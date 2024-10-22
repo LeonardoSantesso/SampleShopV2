@@ -19,19 +19,19 @@ namespace Application.Services
 
         public async Task<OrderDto> GetOrderByIdAsync(int id)
         {
-            var order = await _orderRepository.GetByIdAsync(id);
+            var order = await _orderRepository.GetByIdAsync(id, i => i.OrderItems);
             return _mapper.Map<OrderDto>(order);
         }
 
         public async Task<IEnumerable<OrderDto>> GetAllOrdersAsync()
         {
-            var orders = await _orderRepository.GetAllAsync();
+            var orders = await _orderRepository.GetAllAsync(i => i.OrderItems);
             return _mapper.Map<IEnumerable<OrderDto>>(orders);
         }
 
         public async Task<OrderDto> CreateOrderAsync(OrderDto orderDto)
         {
-            var order = _mapper.Map<Order>(orderDto); // Mapeia de OrderDto para Order
+            var order = _mapper.Map<Order>(orderDto);
             await _orderRepository.AddAsync(order);
             await _orderRepository.SaveChangesAsync();
             return _mapper.Map<OrderDto>(order);

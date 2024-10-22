@@ -71,13 +71,11 @@ TestResults/
 *.cobertura.xml
 
 # Ignore Azure Function settings
-local.settings.json
 
 # Ignore environment settings
 .env
 
 # Ignore database and migration files
-migrations/
 *.mdf
 *.ldf
 

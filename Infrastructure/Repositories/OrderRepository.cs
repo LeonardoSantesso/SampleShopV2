@@ -12,6 +12,7 @@ namespace Infrastructure.Repositories
         public async Task<IEnumerable<Order>> GetByDatesAsync(DateTime start, DateTime end)
         {
             return await _context.Set<Order>()
+                .Include(o => o.OrderItems)
                 .Where(order => order.CreateDate >= start && order.CreateDate <= end)
                 .OrderBy(order => order.CreateDate)
                 .ToListAsync();
