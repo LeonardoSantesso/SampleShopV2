@@ -2,4 +2,100 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Application/obj
+# Ignore files for Visual Studio
+.vs/
+.vscode/
+.vscode/*
+*.code-workspace
+
+# Ignore build directories
+bin/
+obj/
+out/
+debug/
+release/
+
+# Ignore NuGet packages
+*.nupkg
+# Uncomment if you have packages directory
+# packages/
+*.snupkg
+*.nuspec
+
+# Ignore build results
+*.dll
+*.exe
+*.app
+*.so
+*.dylib
+*.class
+*.jar
+*.war
+*.zip
+*.xap
+*.sql
+*.pdb
+
+# Ignore user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sln.ide
+
+# Ignore generated files
+*.g.*
+*.gen.cs
+
+# Ignore logs and temporary files
+*.log
+*.cache
+*.pdb
+*.pidb
+*.ilk
+*.tlog
+*.log
+
+# Ignore web-related files
+node_modules/
+npm-debug.log*
+
+# Ignore JetBrains Rider files
+.idea/
+
+# Ignore coverage and test results
+TestResults/
+.coverage
+.coveragexml
+*.trx
+*.cobertura.xml
+
+# Ignore Azure Function settings
+local.settings.json
+
+# Ignore environment settings
+.env
+
+# Ignore database and migration files
+migrations/
+*.mdf
+*.ldf
+
+# Ignore publish files
+publish/
+
+# Ignore lock files
+project.lock.json
+project.fragment.lock.json
+
+# Ignore generated docs
+doc/
+
+# Ignore packages folder
+packages/
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.bak
+
